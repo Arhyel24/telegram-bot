@@ -26,6 +26,7 @@ const ReceiveScreen = ({ changeUistate, wallet }) => {
   }, [wallet]);
 
   function sliceWalletAddress(address) {
+    if (!address) address = "00000000000000000000000000000000000000000";
     const start = address.slice(0, 8);
     const end = address.slice(-8);
     return `${start}...${end}`;
