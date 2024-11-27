@@ -25,12 +25,12 @@ const ReceiveScreen = ({ changeUistate, wallet }) => {
     generateQrCode();
   }, [wallet]);
 
-  function sliceWalletAddress(address) {
-    if (!address) address = "00000000000000000000000000000000000000000";
-    const start = address.slice(0, 8);
-    const end = address.slice(-8);
-    return `${start}...${end}`;
-  }
+  // function sliceWalletAddress(address) {
+  //   if (!address) address = "00000000000000000000000000000000000000000";
+  //   const start = address.slice(0, 8);
+  //   const end = address.slice(-8);
+  //   return `${start}...${end}`;
+  // }
 
   const handleCopy = async () => {
     try {
@@ -67,7 +67,7 @@ const ReceiveScreen = ({ changeUistate, wallet }) => {
           <Wallet />
           <input
             type="text"
-            value={sliceWalletAddress(wallet)}
+            value={wallet}
             readOnly
             className="bg-transparent text-center w-full"
           />

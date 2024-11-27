@@ -37,7 +37,7 @@ const Header = ({ address }) => {
   };
 
   // Trim the address for display
-  const trimmedAddress = `${address.slice(0, 6)}...${address.slice(-4)}`;
+  // const trimmedAddress = `${address.slice(0, 6)}...${address.slice(-4)}`;
 
   return (
     <header className="shadow-md px-6 py-4 flex justify-between items-center">
@@ -48,7 +48,7 @@ const Header = ({ address }) => {
           className="text-gray-500 cursor-pointer"
           onClick={copyToClipboard}
         >
-          Wallet ({trimmedAddress})
+          Wallet ({address})
         </span>
         <ChevronDown className="ml-2 cursor-pointer" onClick={openModal} />
       </p>
