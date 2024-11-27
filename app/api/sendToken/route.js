@@ -31,7 +31,7 @@ export async function POST(request) {
 
     // Connect to the Solana network
     const connection = new Connection(
-      clusterApiUrl(SOLANA_NETWORK),
+      "https://rpc.devnet.soo.network/rpc",
       "confirmed"
     );
 

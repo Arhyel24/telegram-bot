@@ -6,7 +6,10 @@ import {
 } from "@solana/web3.js";
 import { NextResponse } from "next/server";
 
-const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+const connection = new Connection(
+  "https://rpc.devnet.soo.network/rpc",
+  "confirmed"
+);
 
 export async function POST(req) {
   try {

@@ -15,8 +15,7 @@ export async function POST(req) {
     );
   }
   try {
-    const rpcEndpoint =
-      "https://mainnet.helius-rpc.com/?api-key=2de169df-d4aa-4f0b-91f6-9859db329839"; // Replace with your RPC endpoint
+    const rpcEndpoint = "https://rpc.devnet.soo.network/rpc"; // Replace with your RPC endpoint
     const solanaConnection = new Connection(rpcEndpoint);
 
     const pubKey = new PublicKey(publicKey);
